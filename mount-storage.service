@@ -1,0 +1,13 @@
+[Unit]
+Description=Configure Instance Storage
+Requires=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/instance-storage.sh
+TimeoutStopSec=60
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=default.target
